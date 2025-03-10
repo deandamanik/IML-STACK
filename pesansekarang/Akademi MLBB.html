@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,200..1000;1,200..1000&display=swap" rel="stylesheet">
+        <title>Document</title>
+    <link rel="stylesheet" href="/src/output.css">
+</head>
+<body class="bg-black">
+
+    <!-- Header Section -->
+    <header class="">
+        <div class="py-7 px-64 flex justify-between">
+            <div>
+                <a href="#" class="text-white text-4xl">IML</a>
+            </div>
+            <div class="flex justify-between items-center gap-20">
+                <a href="#" class="text-white font-semibold text-lg">Profile</a>
+                <a href="#" class="text-white font-semibold text-lg">Beranda</a>
+                <a href="#" class="text-stack-orange font-semibold text-lg "> <p class="drop-shadow-[0_0_20px_5px_rgba(255,165,0,0.7)]">Transaksi</p></a>
+                <a href="#" class="text-white font-semibold text-lg">Berita</a>
+                <a href="#"><button class="bg-stack-orange px-6 py-2 rounded-xl text-white font-semibold font-poppins block active:scale-95 hover:bg-orange-hover active:bg-orange-active shadow-xl  hover:scale-105 transition duration-300 hover:shadow-[0_0_20px_5px_rgba(255,165,0,0.7)]">
+                    Log Out
+                </button></a>
+            </div>  
+        </div>
+    </header>
+    
+    <div class="px-24 pt-28 ">
+        <h2 class="text-white text-6xl">Product <span class="text-stack-orange">Name</span></h2>
+    </div>
+
+        <div class="pb-8 pt-10">
+        <div class="flex gap-0.5">
+            <div class="px-24">
+                <h2 class="text-white text-[40px] italic"><span class="text-stack-orange ">Masukan</span> Data Akun</h2>
+            </div>
+            <div>
+                <div class="bg-white px-[500px] py-[1px] mt-8">
+                </div>
+            </div> 
+        </div>
+    </div>
+
+    <!-- Data diri Section -->
+        <section>
+    <!-- Form Input -->
+    <div class="px-28 max-w-[1850px]">
+        <div class="grid grid-cols-2 gap-12 mt-4">
+            <!-- USER ID -->
+            <div class="flex flex-col gap-3">
+                <label for="user_id" class="text-white font-semibold text-lg">Nama</label>
+                <input type="text" id="user_id" placeholder="Contoh: 123456" class="max-w-[750px] px-4 py-3 bg-gray-200 text-black rounded-xl outline-none focus:ring-2 focus:ring-orange-500">
+            </div>
+        
+            <!-- SERVER ID -->
+            <div class="flex flex-col gap-3">
+                <label for="server_id" class="text-white font-semibold text-lg">Alamat Email</label>
+                <input type="text" id="server_id" placeholder="Contoh: 123456" class="max-w-[750px] px-4 py-3 bg-gray-200 text-black rounded-xl outline-none focus:ring-2 focus:ring-orange-500">
+            </div> 
+        
+            <!-- FIELD 3 -->
+            <div class="flex flex-col gap-3">
+                <label for="field3" class="text-white font-semibold text-lg">No telepon/Whatshap</label>
+                <input type="text" id="field3" placeholder="Contoh: 123456" class="max-w-[750px] px-4 py-3 bg-gray-200 text-black rounded-xl outline-none focus:ring-2 focus:ring-orange-500">
+            </div> 
+        
+            <!-- FIELD 4 -->
+            <div class="flex flex-col gap-3">
+                <label for="field4" class="text-white font-semibold text-lg">Username Discord</label>
+                <input type="text" id="field4" placeholder="Contoh: 123456" class="max-w-[750px] px-4 py-3 bg-gray-200 text-black rounded-xl outline-none focus:ring-2 focus:ring-orange-500">
+            </div> 
+        
+            <!-- FIELD 5 -->
+            <div class="flex flex-col gap-3">
+                <label for="field5" class="text-white font-semibold text-lg">ID MLBB</label>
+                <input type="text" id="field5" placeholder="Contoh: 123456" class="max-w-[750px] px-4 py-3 bg-gray-200 text-black rounded-xl outline-none focus:ring-2 focus:ring-orange-500">
+            </div> 
+        </div>  
+    </div>         
+</section>
+
+<div class="pb-8 pt-16">
+    <div class="flex gap-0.5">
+        <div class="px-24">
+            <h2 class="text-white text-[40px] italic"><span class="text-stack-orange">Metode</span> Pembayaran</h2>
+        </div>
+        <div>
+            <div class="bg-white px-[500px] py-[1px] mt-8">
+            </div>
+        </div> 
+    </div>
+</div>
+
+<!-- Pembayaran Section -->
+
+<section>
+    <div class="px-38">
+        <div class="flex gap-16">
+            <label class="relative cursor-pointer">
+                <input type="radio" name="payment" class="peer hidden">
+                <div class="w-72 h-40 bg-[#E65A2E] rounded-xl flex flex-col items-start justify-center px-4 py-2 gap-4
+                    peer-checked:shadow-[0_0_20px_5px_rgba(255,165,0,0.7)] peer-checked:scale-105 transition-all duration-300 shadow-lg hover:scale-105 active:scale-95">
+                    <img src="/src/img/wallet/dana.png" alt="Dana" class="w-56">
+                    <span class="text-white font-semibold text-2xl">Dana</span>
+                </div> 
+            </label>
+
+            <label class="relative cursor-pointer">
+                <input type="radio" name="payment" class="peer hidden">
+                <div class="w-72 h-40 bg-[#E65A2E] rounded-xl flex flex-col items-start justify-center px-4 py-2 gap-2
+                    peer-checked:shadow-[0_0_20px_5px_rgba(255,165,0,0.7)] peer-checked:scale-105 transition-all duration-300 shadow-lg hover:scale-105 active:scale-95">
+                    <img src="/src/img/wallet/ovo.png" alt="Dana" class="w-56">
+                    <span class="text-white font-semibold text-2xl mt-4">OVO</span>
+                </div> 
+            </label>
+
+            <label class="relative cursor-pointer">
+                <input type="radio" name="payment" class="peer hidden">
+                <div class="w-72 h-40 bg-[#E65A2E] rounded-xl flex flex-col items-start justify-center px-4 py-2 gap-2
+                    peer-checked:shadow-[0_0_20px_5px_rgba(255,165,0,0.7)] peer-checked:scale-105 transition-all duration-300 shadow-lg hover:scale-105 active:scale-95">
+                    <img src="/src/img/wallet/gopay.png" alt="Dana" class="w-56">
+                    <span class="text-white font-semibold text-2xl mt-4">Gopay</span>
+                </div> 
+            </label>
+            
+        </div>
+    </div>
+</section>
+
+<div class="px-38">
+    <a href="/pembayaran/Akademi MLBB.html"><button class="mt-16  bg-stack-orange px-[700px] py-2 rounded-xl text-white font-semibold font-poppins block active:scale-95 hover:bg-orange-hover active:bg-orange-active shadow-xl  hover:scale-105 transition duration-300 hover:shadow-[0_0_20px_5px_rgba(255,165,0,0.7)]">
+        Lakukan Pembayaran
+    </button></a>
+</div>
+
+
+<!-- Footer  -->
+
+<div class="mt-24 mb-10 mx-auto">
+        <div class="bg-white px-[500px] py-[1px]">
+    </div>
+
+    <div class="flex flex-col text-center justify-center text-white mt-8">
+        <h1 class="text-6xl font-extrabold italic">IML</h1>
+        <p class="mt-4 font-bold text-xl ">   +6281XXXXXXX | email@gmail.com </p>
+        <p class="font-bold text-xl"> Copyright © 2025 All rights reserved</p>
+    </div>
+</div>
+
+</body>
+</html>

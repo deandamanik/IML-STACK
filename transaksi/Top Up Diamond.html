@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,200..1000;1,200..1000&display=swap" rel="stylesheet">
+        <title>Document</title>
+    <link rel="stylesheet" href="/src/output.css">
+</head>
+<body class="bg-black">
+
+    <!-- Header Section -->
+    <header class="">
+        <div class="py-7 px-64 flex justify-between">
+            <div>
+                <a href="#" class="text-white text-4xl">IML</a>
+            </div>
+            <div class="flex justify-between items-center gap-20">
+                <a href="#" class="text-white font-semibold text-lg">Profile</a>
+                <a href="#" class="text-white font-semibold text-lg">Beranda</a>
+                <a href="#" class="text-stack-orange font-semibold text-lg "> <p class="drop-shadow-[0_0_20px_5px_rgba(255,165,0,0.7)]">Transaksi</p></a>
+                <a href="#" class="text-white font-semibold text-lg">Berita</a>
+                <a href="#"><button class="bg-stack-orange px-6 py-2 rounded-xl text-white font-semibold font-poppins block active:scale-95 hover:bg-orange-hover active:bg-orange-active shadow-xl  hover:scale-105 transition duration-300 hover:shadow-[0_0_20px_5px_rgba(255,165,0,0.7)]">
+                    Log Out
+                </button></a>
+            </div>  
+        </div>
+    </header>
+
+    <!-- Pilihan Section -->
+
+    <section>
+        <div class="flex pt-20 px-24 gap-12">
+            <a href="Akademi MLBB.html">
+                <button class="bg-stack-orange px-[52px] py-[14px] rounded-xl text-white font-semibold font-poppins block active:scale-95 hover:bg-orange-hover active:bg-orange-active hover:shadow-[0_0_20px_5px_rgba(255,165,0,0.7)] transition duration-300 text-xl">
+                    Akademi MLBB
+                </button>
+            </a>            
+            <a href="Private Online Coaching.html"><button class="bg-stack-orange px-12 py-3 rounded-xl text-white font-semibold font-poppins block active:scale-95 hover:bg-orange-hover active:bg-orange-active hover:scale-105 transition duration-300 hover:shadow-[0_0_20px_5px_rgba(255,165,0,0.7)] text-xl">
+                Private Online Coaching
+            </button></a>
+            <a href="Top Up Diamond.html"><button class="bg-stack-orange px-8 py-3 rounded-xl text-white font-semibold font-poppins block active:scale-95 hover:bg-orange-hover active:bg-orange-active hover:scale-105 transition duration-300 shadow-[0_0_20px_5px_rgba(255,165,0,0.7)] text-xl">
+                Top Up Diamond
+            </button></a>
+        </div>
+    </section>
+
+   
+        <div class="pt-16 pb-8">
+        <div class="flex gap-0.5">
+            <div class="px-32">
+                <h2 class="text-white text-[40px] italic"><span class="text-stack-orange">Masukan</span> Data Akun</h2>
+            </div>
+            <div>
+                <div class="bg-white px-[550px] py-[1px] mt-6">
+                </div>
+            </div> 
+        </div>
+    </div>
+
+        <!-- Data diri Section -->
+        <section>
+    <!-- Form Input -->
+    <div class="px-28">
+        <div class="flex flex-row gap-12 mt-4 ">
+            <!-- USER ID -->
+                <div class="flex flex-col gap-3">
+                    <label for="user_id" class="text-white font-semibold">USER ID</label>
+                    <input type="text" id="user_id" placeholder="Contoh: 123456" class="w-[780px] px-4 py-2 bg-gray-200 text-black rounded-xl outline-none focus:ring-2 focus:ring-orange-500">
+                    </div>
+            <!-- SERVER ID -->
+                <div class="flex flex-col gap-3">
+                    <label for="server_id" class="text-white font-semibold">SERVER ID</label>
+                    <input type="text" id="server_id" placeholder="Contoh: 123456" class="w-[780px] px-4 py-2 bg-gray-200 text-black rounded-xl outline-none focus:ring-2 focus:ring-orange-500 text-left">
+                </div> 
+            </div>
+            <!-- Checkbox -->
+                <div class="flex items-center mt-8">
+                    <input type="checkbox" id="save_id" class="w-5 h-5 text-orange-500 border-gray-300 rounded focus:ring-orange-500">
+                    <label for="save_id" class="ml-2 text-white text-sm">Simpan ID untuk pembelian berikutnya</label>
+                </div>
+            </div>
+        </div>
+    </div> 
+    </section>
+
+    <div class="pt-16 pb-16">
+        <div class="flex gap-0.5">
+            <div class="px-32">
+                <h2 class="text-white text-[40px] italic"><span class="text-stack-orange">Product</span> Category</h2>
+            </div>
+            <div>
+                <div class="bg-white px-[550px] py-[1px] mt-9">
+                </div>
+            </div>
+        </div>   
+    </div>                
+
+
+<!-- Product Section -->
+ <section>
+    <div class="grid grid-cols-3 grid-rows-2 gap-20 px-28">
+
+        <label class="relative cursor-pointer block ">
+            <input type="radio" name="selectedImage" class="peer hidden">
+            <img src="/src/img/topup/test.png" class="w-max-[200px] h-max-[120px] border-4 border-transparent peer-checked:border-stack-orange transition-all rounded-3xl">
+        </label>
+        <label class="relative cursor-pointer block">
+            <input type="radio" name="selectedImage" class="peer hidden">
+            <img src="/src/img/topup/test.png" class="w-full h-auto border-4 border-transparent peer-checked:border-stack-orange transition-all rounded-3xl">
+        </label>
+        <label class="relative cursor-pointer block">
+            <input type="radio" name="selectedImage" class="peer hidden">
+            <img src="/src/img/topup/test.png" class="w-full h-auto border-4 border-transparent peer-checked:border-stack-orange transition-all rounded-3xl">
+        </label>
+        <label class="relative cursor-pointer block">
+            <input type="radio" name="selectedImage" class="peer hidden">
+            <img src="/src/img/topup/test.png" class="w-full h-auto border-4 border-transparent peer-checked:border-stack-orange transition-all rounded-3xl">
+        </label>
+        <label class="relative cursor-pointer block">
+            <input type="radio" name="selectedImage" class="peer hidden">
+            <img src="/src/img/topup/test.png" class="w-max[20px] h-auto border-4 border-transparent peer-checked:border-stack-orange transition-all rounded-3xl">
+        </label>
+        <label class="relative cursor-pointer block">
+            <input type="radio" name="selectedImage" class="peer hidden">
+            <img src="/src/img/topup/test.png" class="w-max[20px] h-auto border-4 border-transparent peer-checked:border-stack-orange transition-all rounded-3xl">
+        </label>
+    </div>
+ </section>
+
+
+        <!-- Footer  -->
+
+        <div class="mt-24 mb-10 mx-auto">
+            <div class="bg-white px-[500px] py-[1px]">
+        </div>
+
+        <div class="flex flex-col text-center justify-center text-white mt-8">
+            <h1 class="text-6xl font-extrabold italic">IML</h1>
+            <p class="mt-4 font-bold text-xl ">   +6281XXXXXXX | email@gmail.com </p>
+            <p class="font-bold text-xl"> Copyright © 2025 All rights reserved</p>
+        </div>
+        </div>
+
+</body>
+</html>
