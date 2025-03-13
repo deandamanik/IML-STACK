@@ -1,12 +1,12 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="scroll-smooth">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,200..1000;1,200..1000&display=swap" rel="stylesheet">
-        <title>Document</title>
+        <title>IML</title>
     <link rel="stylesheet" href="./src/output.css">
 </head>
 <body class="bg-black">
@@ -44,7 +44,7 @@
                         <span class="text-orange-300">Pro Scene</span> Mobile Legends dalam waktu 
                         <span class="text-orange-300">3 Bulan</span> menggunakan strategi kami.
                     </p>
-                    <a href="#">
+                    <a href="#" id="openModal">
                         <button class="mt-7 bg-stack-orange px-4 md:px-5 lg:px-6 py-2 md:py-2.5 lg:py-3 rounded-xl text-white font-semibold font-poppins block active:scale-95 hover:bg-orange-hover active:bg-orange-active shadow-xl hover:scale-105 transition duration-300 hover:shadow-[0_0_20px_5px_rgba(255,165,0,0.7)]">
                             Get started
                         </button>
@@ -63,7 +63,7 @@
 <section class="px-12 py-24 flex flex-col items-center justify-center min-h-screen">
     <img src="/src/img/landingpage/1.png" alt="">
     <div class="w-xl px-6 md:px-8 lg:px-36 mt-16">
-        <a href="/pembayaran/Akademi MLBB.html">
+        <a href="#" id="openModal">
             <button class="w-full bg-stack-orange px-8 py-3 rounded-xl text-white font-semibold font-poppins block active:scale-95 hover:bg-orange-hover active:bg-orange-active shadow-xl hover:scale-105 transition duration-300 hover:shadow-[0_0_20px_5px_rgba(255,165,0,0.7)]">
                 Join Now
             </button>
@@ -89,11 +89,11 @@
         </div>
 
             <!-- Modal Login -->
-            <div id="loginModal" class="fixed inset-0  bg-opacity-30 backdrop-blur-md hidden flex items-center justify-center">
-            
-        <!-- Popup -->
-        <div id="modalContent" class="relative bg-profile text-white rounded-xl shadow-lg px-8 py-10 w-[90%] max-w-md 
-        translate-y-[-50px] opacity-0 transition-all duration-300">
+            <div id="loginModal" class="hidden">
+            <div class="flex items-center justify-center fixed inset-0  bg-opacity-30 backdrop-blur-md">
+
+            <!-- Popup -->
+             <div id="modalContent" class="relative bg-profile text-white rounded-xl shadow-lg px-8 py-10 w-[90%] max-w-md translate-y-[-50px] opacity-0 transition-all duration-300">
             
             <!-- Tombol Close -->
             <button id="closeModal" class="absolute top-4 right-4 text-gray-400 hover:text-gray-200 text-2xl">&times;</button>
@@ -102,10 +102,11 @@
             <img src="/src/img/monyet 1.png" alt="Karakter" class="absolute -top-50 left transform -translate-x-1/2 w-36 md:w-40 lg:w-5xl">
 
             <!-- Judul -->
-            <h2 class="text-center text-3xl font-bold italic mt-12">LOGIN</h2>
+            <h2 class="text-center text-4xl font-bold italic mt-12">LOGIN</h2>
 
             <!-- Form -->
-            <form class="mt-6 space-y-4">
+             
+            <form action="mainpage.html" method="GET" class="mt-6 space-y-4">
                 
                 <!-- Username -->
                 <div>
@@ -128,7 +129,7 @@
                 </div>
 
                 <!-- Tombol Login -->
-                <a href="mainpage.html"><button class="w-full bg-orange-500 text-white py-3 rounded-lg font-semibold text-lg shadow-md hover:bg-orange-600 transition duration-300">
+                <a href="mainpage.html"><button type="submit" class="w-full bg-orange-500 text-white py-3 rounded-lg font-semibold text-lg shadow-md hover:bg-orange-600 transition duration-300">
                     Login
                 </button></a>
             </form>
@@ -136,47 +137,64 @@
             <!-- Link Daftar -->
             <p class="text-center text-sm mt-4">Belum memiliki akun? <a href="#" class="text-orange-400 font-semibold">Daftar Sekarang</a></p>
 
-            <!-- Gambar Karakter -->
-            <img src="/src/img/ornamen.png" alt="Karakter" class="absolute top-48 right transform translate-x-1/2 w-24 md:w-24 lg:w-sm">
+                <!-- Gambar Karakter -->
+                <img src="/src/img/ornamen.png" alt="Karakter" class="absolute top-[197px] right transform translate-x-[200px] w-24 md:w-24 lg:w-sm">
         </div>
     </div>
+</div>
 
-    <script>
-        const modal = document.getElementById("loginModal");
-        const modalContent = document.getElementById("modalContent");
-        const openModal = document.getElementById("openModal");
-        const closeModal = document.getElementById("closeModal");
-        const loginButton = document.getElementById("loginButton");
-    
-        openModal.addEventListener("click", () => {
+<script>
+    const modal = document.getElementById("loginModal");
+    const modalContent = document.getElementById("modalContent");
+    const openModalButtons = document.querySelectorAll("[id='openModal']");
+    const closeModal = document.getElementById("closeModal");
+    const loginButton = document.getElementById("loginButton");
+
+    // Fungsi untuk membuka modal setelah delay
+    function openModalWithDelay() {
+        setTimeout(() => {
             modal.classList.remove("hidden");
             setTimeout(() => {
                 modalContent.classList.remove("translate-y-[-50px]", "opacity-0");
                 modalContent.classList.add("translate-y-0", "opacity-100");
             }, 50);
+        }, 500); // Delay 500ms sebelum modal muncul
+    }
+
+    // Tambahkan event listener ke semua tombol dengan id="openModal"
+    openModalButtons.forEach(button => {
+        button.addEventListener("click", (e) => {
+            e.preventDefault();
+            openModalWithDelay(); // Buka modal dengan delay
         });
-    
-        closeModal.addEventListener("click", () => {
+    });
+
+    // Tutup modal saat tombol close diklik
+    closeModal.addEventListener("click", () => {
+        modalContent.classList.add("translate-y-[-50px]", "opacity-0");
+        setTimeout(() => {
+            modal.classList.add("hidden");
+        }, 300);
+    });
+
+    // Tutup modal saat klik di luar popup
+    modal.addEventListener("click", (e) => {
+        if (e.target === modal) {
             modalContent.classList.add("translate-y-[-50px]", "opacity-0");
             setTimeout(() => {
                 modal.classList.add("hidden");
             }, 300);
-        });
-    
-        modal.addEventListener("click", (e) => {
-            if (e.target === modal) {
-                modalContent.classList.add("translate-y-[-50px]", "opacity-0");
-                setTimeout(() => {
-                    modal.classList.add("hidden");
-                }, 300);
-            }
-        });
-    
-        // Navigasi ke mainpage.html saat tombol login ditekan
-        loginButton.addEventListener("click", () => {
-            window.location.href = "mainpage.html";
-        });
-    </script>
+        }
+    });
+
+    // Navigasi ke mainpage.html saat tombol login ditekan
+    loginButton?.addEventListener("click", () => {
+        window.location.href = "mainpage.html";
+    });
+</script>
+
+
+
 </body>
 </html>
 
